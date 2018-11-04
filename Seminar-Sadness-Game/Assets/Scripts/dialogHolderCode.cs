@@ -1,11 +1,12 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class DialogueHolder : MonoBehaviour
-{
+public class dialogHolderCode : MonoBehaviour {
+
     public string dialogue;
 
-    private DialogueManager dMan;
+    private dialogManagerCode dMan;
 
     public string[] dialogueLines;
 
@@ -13,17 +14,17 @@ public class DialogueHolder : MonoBehaviour
 
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
-        dMan = FindObjectOfType<DialogueManager>();
+        dMan = FindObjectOfType<dialogManagerCode>();
         thePlayer = FindObjectOfType<PlayerFlags>();
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
-	
-	}
+
+    }
 
     void OnTriggerStay(Collider other)
     {

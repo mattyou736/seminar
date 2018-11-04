@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerFlags : MonoBehaviour {
 
     public bool Move = true;
+    public bool key, code;
+
+    public GameObject interactSymbol;
 
     //rigidbody
     private Rigidbody RigidPlayer;
@@ -21,5 +24,17 @@ public class PlayerFlags : MonoBehaviour {
             RigidPlayer.velocity = Vector3.zero;
             return;
         }
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Holder")
+        {
+            interactSymbol.SetActive(true);
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        interactSymbol.SetActive(false);
     }
 }
