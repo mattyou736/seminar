@@ -7,6 +7,7 @@ public class MyDoor : MonoBehaviour {
     private PlayerFlags thePlayer;
     public GameObject door;
 
+
     // Use this for initialization
     void Start()
     {
@@ -28,5 +29,6 @@ public class MyDoor : MonoBehaviour {
                 Destroy(gameObject);
             }
         }
+        
     }
 }

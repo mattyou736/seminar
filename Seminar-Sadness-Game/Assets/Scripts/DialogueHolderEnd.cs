@@ -28,14 +28,15 @@ public class DialogueHolderEnd : MonoBehaviour
 
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.name == "Player")
+        if (other.gameObject.name == "Player" && thePlayer.code == true)
         {
-            if (Input.GetKeyUp(KeyCode.E) && thePlayer.code == true)
+            print("first");
+            if (Input.GetKeyUp(KeyCode.E) )
             {
                 // dMan.ShowBox(dialogue);
-
+                print("middle");
                 if (!dMan.dialogActive)
                 {
                     print("last");

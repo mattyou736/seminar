@@ -32,6 +32,10 @@ public class PlayerFlags : MonoBehaviour {
         {
             interactSymbol.SetActive(true);
         }
+        if (other.gameObject.tag == "Door" && key == true)
+        {
+            interactSymbol.SetActive(true);
+        }
     }
     void OnTriggerExit(Collider other)
     {
